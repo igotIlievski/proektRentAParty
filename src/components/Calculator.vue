@@ -159,8 +159,8 @@ const cancelReservation = () => {
         
       </div>
       <div v-else
-              class="mt-4 p-4 rounded border-turquoise"
-              style="background-color: #2a2a2a; color: #e0e0e0;"
+              class="calculator mt-4 p-4 rounded border-turquoise"
+              style="background-color: #2a2a2a; color: #e0e0e0; width: 65%; margin: 0 auto;"
             >
             <button class="btn btn-sm close-btn" aria-label="Close"
               v-on:click="cancelReservation()">
@@ -294,4 +294,5 @@ const cancelReservation = () => {
 .close-btn:hover {
   color: #65d6c2;
 }
+
 </style>

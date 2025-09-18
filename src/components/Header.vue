@@ -38,7 +38,7 @@
             </li>
             
             <li class="nav-item">
-              <router-link to="/contact" class="nav-link" href="#contact">Contact</router-link>
+              <router-link to="/contact" class="nav-link" href="/contact">Contact</router-link>
             </li>
           </ul>
         </div>

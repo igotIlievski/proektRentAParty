@@ -1,7 +1,21 @@
 <script setup>
-  let services = {}
+  let services = [{
+    header: "Tents",
+    paragraph: "Strong, elegant tents for any weather, perfect for your outdoor celebrations."
+  },
+  {
+    header: "Chairs",
+    paragraph: "Comfortable and stylish seating to match any event theme and guest list size."
+  },
+  {
+    header: "Dining Tables",
+    paragraph: "Elegant and functional tables that create unforgettable dining experiences."
+  },
+  {
+    header: "Bar Tables & Stools",
+    paragraph: "Perfect for cocktail hours and casual lounges, boosting your event vibe."
+  }]
 </script>
-
 <template>
 <section id="services" class="py-5" style="background-color: #1b1b1b">
     <div class="container">
@@ -33,8 +47,7 @@
             ></i>
             <h4 style="color: #e0e0e0">Tents</h4>
             <p style="color: #cccccc">
-              Strong, elegant tents for any weather, perfect for your outdoor
-              celebrations.
+              Strong, elegant tents for any weather, perfect for your outdoor celebrations.
             </p>
           </div>
         </div>
@@ -85,7 +98,6 @@
         </div>
       </div>
 
-      <!-- CTA -->
         <div class="text-center mt-5">
           <h5 style="color: #e0e0e0">
             Ready to create an unforgettable event?

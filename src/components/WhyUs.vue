@@ -1,3 +1,16 @@
+<script setup>
+ let reasons = [
+  {header : "Reliable Service",
+    paragraph: "Always on time with professional setup and takedown for a stress-free experience."
+  },
+  {header : "Affordable Pricing",
+    paragraph: "Top-quality rentals at competitive prices, with transparent quotes and no hidden fees."
+  },
+  {header : "Premium Quality",
+    paragraph: "Immaculately maintained equipment that will impress your guests and elevate your event."
+  }
+  ];
+</script>
 <template>
     <!-- Why Us Section -->
     <section id="why-us" class="py-5" style="background-color: #1b1b1b">
@@ -13,22 +26,21 @@
           Why Choose Us?
         </h2>
         <div class="row text-center">
-          <div class="col-md-4 mb-4">
+          <div v-for="reason in reasons" class="col-md-4 mb-4">
             <div
               class="p-4 h-100 border border-turquoise rounded-4 shadow"
               style="background-color: #252525"
             >
               <i class="fas fa-handshake fa-3x mb-3" style="color: #7ee7d3"></i>
               <h4 style="color: #e0e0e0; font-family: 'Poppins', sans-serif">
-                Reliable Service
+                {{reason.header}}
               </h4>
               <p style="color: #cccccc">
-                Always on time with professional setup and takedown for a
-                stress-free experience.
+                {{reason.paragraph}}
               </p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <!-- <div class="col-md-4 mb-4">
             <div
               class="p-4 h-100 border border-turquoise rounded-4 shadow"
               style="background-color: #252525"
@@ -61,8 +73,8 @@
                 and elevate your event.
               </p>
             </div>
-          </div>
-        </div>
+          </div>-->
+        </div>  
       </div>
     </section>
 </template>
