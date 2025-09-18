@@ -1,3 +1,7 @@
+<script setup>
+  let services = {}
+</script>
+
 <template>
 <section id="services" class="py-5" style="background-color: #1b1b1b">
     <div class="container">
@@ -86,8 +90,8 @@
           <h5 style="color: #e0e0e0">
             Ready to create an unforgettable event?
           </h5>
-          <a
-            href="#calculator"
+          <router-link
+            to="/order"
             class="btn btn-lg mt-3"
             style="
               background-color: #7ee7d3;
@@ -97,8 +101,8 @@
               font-weight: bold;
             "
           >
-            Get Your Instant Quote 🚀
-          </a>
+            Order
+          </router-link>
         </div>
       </div>
     </section>

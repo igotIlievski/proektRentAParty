@@ -60,8 +60,23 @@ const makeReservation = () => {
   let orders = mergedOrders();
   reservation = {event: event, eventDate : eventDate, orders : orders};
   showSummary.value = true;
-  console.log("Inside makeReservation showSummary: "+ showSummary.value );
 }
+const resetForm = () => {
+  event.value = '';
+  eventDate.value = '';
+  orders.value = [];
+  showSummary.value = false;
+};
+const confirmReservation = () => {
+  showSummary.value = false;
+  console.log(reservation);
+  reservation = {};
+  resetForm();
+};
+const cancelReservation = () => {
+  showSummary.value = false;
+};
+
 
 </script>
 <template>
@@ -147,8 +162,12 @@ const makeReservation = () => {
               class="mt-4 p-4 rounded border-turquoise"
               style="background-color: #2a2a2a; color: #e0e0e0;"
             >
+            <button class="btn btn-sm close-btn" aria-label="Close"
+              v-on:click="cancelReservation()">
+              &times;
+            </button>
               <h3 style="font-family: 'Dancing Script', cursive; color: #7ee7d3;">
-                Booking Summary
+                Reservation Summary
               </h3>
             
               <p><strong>Event type:</strong> {{ event || 'Not selected' }}</p>
@@ -162,13 +181,16 @@ const makeReservation = () => {
                   </span>
                 </p>
               </div>
-              <button
-              type="button"
-              v-on:click="confirmReservation()"
-              class="btn btn-turquoise w-100 mb-3"
-            >
-              Confirm
-            </button>
+              <div class="d-flex gap-2 mt-4">
+                <button type="button" class="btn btn-turquoise w-100 mb-3"
+                  v-on:click="confirmReservation()">
+                Confirm
+                </button>
+                <button class="btn btn-outline-light w-100 mb-3" style="border-color: #7ee7d3; color: #7ee7d3;"
+                  v-on:click="cancelReservation()">
+                    Cancel
+                </button>
+              </div>
         </div>
     </section>
 </template>
@@ -241,8 +263,8 @@ const makeReservation = () => {
 
 .remove-btn {
   position: absolute;
-  top: 6px;
-  right: 10px;
+  top: 0px;
+  right: 5px;
   background: transparent;
   border: none;
   color: #ccc;
@@ -255,5 +277,21 @@ const makeReservation = () => {
 
 .remove-btn:hover {
   color: #ff6b6b;
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #7ee7d3;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #65d6c2;
 }
 </style>

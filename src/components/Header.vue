@@ -18,26 +18,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#hero">Hero</a>
+            </li> -->
+            <li class="nav-item">
+              <router-link to="/services" class="nav-link" >Services</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <router-link to="/why-us" class="nav-link">Why Us</router-link>
             </li>
+
+            
             <li class="nav-item">
-              <a class="nav-link" href="#calculator">Calculator</a>
+              <router-link to="/gallery" class="nav-link">Gallery</router-link>
             </li>
+            
             <li class="nav-item">
-              <a class="nav-link" href="#why-us">Why Us</a>
+              <router-link to="/testimonials" class="nav-link">Testimonials</router-link>
             </li>
+            
             <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonials">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <router-link to="/contact" class="nav-link" href="#contact">Contact</router-link>
             </li>
           </ul>
         </div>
